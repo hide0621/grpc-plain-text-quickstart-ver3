@@ -4,6 +4,38 @@ This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
 If you want to learn more about Quarkus, please visit its website: <https://quarkus.io/>.
 
+# このプロジェクトの作成方法
+
+`quarkus create app org.acme:grpc-plain-text-quickstart-ver3 --kotlin --gradle`
+
+# 手順
+
+1. `build.gradle` に`implementation 'io.quarkus:quarkus-grpc'`を追加
+
+2. `src/main/proto` ディレクトリを作成し、`helloworld.proto` を作成
+
+3. `./gradlew compileKotlin`によりコードを生成 
+
+- 生成先は`build/classes`以下のjavaファイル
+
+- このファイルを使ってKotlinで実装する！
+
+- 生成されるファイルイメージは[こちら](https://ja.quarkus.io/guides/grpc-getting-started#configuring-your-project)
+
+4. gRPCサービスの実装
+
+- 注意点は、「`Greeter`」を実装すること、実装するクラスに`@GrpcService`を付与すること（これがないとgrpcサービスが使えない）
+
+5. `application.properties`に`quarkus.grpc.clients.hello.host=localhost`を追加
+
+6. `./gradlew quarkusDev`で起動
+ 
+- 今回検証できるエンドポイントはこちら
+
+- http://localhost:8080/hello
+
+- http://localhost:8080/hello/quarkus
+
 ## Running the application in dev mode
 
 You can run your application in dev mode that enables live coding using:
