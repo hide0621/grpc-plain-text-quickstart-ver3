@@ -16,9 +16,9 @@ If you want to learn more about Quarkus, please visit its website: <https://quar
 
 3. `./gradlew compileKotlin`によりコードを生成 
 
-- 生成先は`build/classes`以下のjavaファイル
+- 生成先は`build/classes`以下であり、javaファイルなどが生成される
 
-- このファイルを使ってKotlinで実装する！
+- **このファイルを使ってKotlinで実装する！**
 
 - 生成されるファイルイメージは[こちら](https://ja.quarkus.io/guides/grpc-getting-started#configuring-your-project)
 
